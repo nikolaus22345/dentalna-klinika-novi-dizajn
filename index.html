@@ -93,24 +93,22 @@
 <body class="bg-background font-body text-on-surface antialiased">
 <!-- Top Navigation -->
 
-<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-none shadow-sm md:py-6">
-<div class="flex flex-wrap justify-between items-center w-full px-6 md:px-12 max-w-[1920px] mx-auto relative pt-4 pb-4 md:py-0">
-    <a href="#" onclick="showPage('home')" class="text-xl font-bold font-serif tracking-tighter text-blue-900 dark:text-blue-400" style="text-decoration:none;">DENTISTA CROAZIA</a>
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-none shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-6 md:px-12 py-4 md:py-6 max-w-[1920px] mx-auto">
+    <!-- Logo -->
+    <a href="#" onclick="showPage('home')" class="text-lg md:text-xl font-bold font-serif tracking-tighter text-blue-900 dark:text-blue-400 uppercase" style="text-decoration:none;">DENTISTA CROAZIA</a>
     
-    <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none z-50">
-        <span class="material-symbols-outlined text-3xl">menu</span>
-    </button>
-
-    <!-- Desktop & Mobile Links Container -->
-    <div id="nav-links" class="hidden w-full md:w-auto md:flex flex-col md:flex-row items-center gap-6 md:gap-12 mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-none border-outline-variant/20 h-screen md:h-auto overflow-y-auto md:overflow-visible">
-        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#trattamenti" onclick="showPage('home')">Trattamenti</a>
-        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#clinica" onclick="showPage('clinica')">Clinica</a>
-        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#prezzi" onclick="showPage('prezzi')">Prezzi</a>
-        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#contatti" onclick="showPage('prenota')">Contatti</a>
-        <button onclick="showPage('prenota')" class="bg-primary-container text-on-primary px-8 py-3 font-semibold tracking-wide transition-transform hover:-translate-y-1 shadow-sm w-full md:w-auto">
-            Prenota Ora
-        </button>
+    <!-- Linkovi (Samo za vece ekrane) -->
+    <div class="hidden md:flex items-center gap-8 lg:gap-12">
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300" href="#trattamenti" onclick="showPage('home')">Trattamenti</a>
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300" href="#clinica" onclick="showPage('clinica')">Clinica</a>
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300" href="#prezzi" onclick="showPage('prezzi')">Prezzi</a>
     </div>
+
+    <!-- Glavni gumb (Prikazan i na mobitelu i na desktopu) -->
+    <button onclick="showPage('prenota')" class="bg-primary-container text-on-primary px-6 md:px-11 py-3 md:py-4 text-xs md:text-sm font-semibold tracking-widest uppercase transition-transform hover:-translate-y-1 shadow-sm whitespace-nowrap">
+        Prenota Ora
+    </button>
 </div>
 </nav>
 
@@ -918,30 +916,7 @@ function showPage(pageId) {
     }
     var target = document.getElementById('page-' + pageId);
     if(target) target.style.display = 'block';
-    
-    // Hide mobile menu when a link is clicked
-    var menu = document.getElementById('nav-links');
-    if (menu && menu.classList.contains('flex')) {
-        menu.classList.remove('flex');
-        menu.classList.add('hidden');
-    }
     window.scrollTo(0, 0);
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    var btn = document.getElementById('mobile-menu-btn');
-    var menu = document.getElementById('nav-links');
-    if(btn && menu) {
-        btn.addEventListener('click', function() {
-            if(menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('flex');
-            } else {
-                menu.classList.remove('flex');
-                menu.classList.add('hidden');
-            }
-        });
-    }
-});
 </script>
 </body></html>
