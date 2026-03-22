@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DENTISTA CROAZIA | Eccellenza Clinica e Rigore Architettonico</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#360f00",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#d9e2ff",
+              "tertiary-fixed": "#ffdbcd",
+              "primary": "#003c90",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-container": "#993900",
+              "surface-tint": "#1d59c1",
+              "on-surface": "#191c1d",
+              "on-tertiary-container": "#ffc0a7",
+              "secondary-container": "#becefd",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "primary-container": "#0f52ba",
+              "on-error": "#ffffff",
+              "on-background": "#191c1d",
+              "outline-variant": "#c3c6d5",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#d9e2ff",
+              "on-secondary-fixed-variant": "#35466d",
+              "tertiary-fixed-dim": "#ffb596",
+              "surface-container-low": "#f3f4f5",
+              "surface-container": "#edeeef",
+              "on-secondary-fixed": "#061a3f",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "inverse-primary": "#b0c6ff",
+              "inverse-surface": "#2e3132",
+              "tertiary": "#732900",
+              "on-primary-container": "#bcceff",
+              "surface": "#f8f9fa",
+              "on-primary-fixed-variant": "#00419c",
+              "secondary-fixed-dim": "#b5c6f5",
+              "secondary": "#4d5e86",
+              "on-primary-fixed": "#001945",
+              "on-surface-variant": "#434653",
+              "surface-container-high": "#e7e8e9",
+              "surface-bright": "#f8f9fa",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-container": "#475780",
+              "primary-fixed-dim": "#b0c6ff",
+              "outline": "#737784",
+              "background": "#f8f9fa",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "surface-dim": "#d9dadb"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "none": "0px",
+              "DEFAULT": "0px", 
+              "lg": "0px", 
+              "xl": "0px", 
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- Top Navigation -->
+
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-none shadow-sm md:py-6">
+<div class="flex flex-wrap justify-between items-center w-full px-6 md:px-12 max-w-[1920px] mx-auto relative pt-4 pb-4 md:py-0">
+    <a href="#" onclick="showPage('home')" class="text-xl font-bold font-serif tracking-tighter text-blue-900 dark:text-blue-400" style="text-decoration:none;">DENTISTA CROAZIA</a>
+    
+    <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none z-50">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+
+    <!-- Desktop & Mobile Links Container -->
+    <div id="nav-links" class="hidden w-full md:w-auto md:flex flex-col md:flex-row items-center gap-6 md:gap-12 mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-none border-outline-variant/20 h-screen md:h-auto overflow-y-auto md:overflow-visible">
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#trattamenti" onclick="showPage('home')">Trattamenti</a>
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#clinica" onclick="showPage('clinica')">Clinica</a>
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#prezzi" onclick="showPage('prezzi')">Prezzi</a>
+        <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center" href="#contatti" onclick="showPage('prenota')">Contatti</a>
+        <button onclick="showPage('prenota')" class="bg-primary-container text-on-primary px-8 py-3 font-semibold tracking-wide transition-transform hover:-translate-y-1 shadow-sm w-full md:w-auto">
+            Prenota Ora
+        </button>
+    </div>
+</div>
+</nav>
+
+
+<main id="page-home" style="display: block;">
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 bg-surface">
+<div class="max-w-[1920px] mx-auto w-full px-12 grid grid-cols-12 gap-0 items-center">
+<div class="col-span-12 lg:col-span-6 z-10 py-20 lg:pr-24">
+<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.3em] mb-8 block">Standard Clinici Europei</span>
+<h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-[1.1] tracking-tight mb-10">
+                        Dentisti in Croazia: <br/>
+<span class="italic text-primary">Eccellenza Clinica</span> e Risparmio Garantito
+                    </h1>
+<p class="text-on-surface-variant text-xl max-w-xl leading-relaxed mb-12">
+                        La precisione della tecnologia tedesca incontra l'accoglienza mediterranea. Chirurgia implantare e odontoiatria estetica in strutture d'avanguardia.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary-container text-on-primary px-12 py-5 font-bold tracking-tight hover:bg-primary transition-all">
+                            RICHIEDI PREVENTIVO GRATUITO
+                        </button>
+<button class="border border-outline-variant/30 text-primary px-12 py-5 font-bold tracking-tight hover:bg-surface-container-low transition-all">
+                            SCOPRI I TRATTAMENTI
+                        </button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-6 relative h-[600px] lg:h-screen w-full">
+<img alt="Modern Dental Clinic Interior" class="absolute inset-0 w-full h-full object-cover grayscale-[30%] brightness-95" data-alt="Minimalist modern white dental office with high-tech equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy5AIlMFC6jPnOJz4-IhF-qi2oRP1HjW4PXddeaAm20SQipJvB37Nv5T5CifGV1r1kmw0YijDS2WACENvuxENleH09l-qox_vwOT04yJVPZ9tv1YWU9cmCtpHAgDUwZh7puee2Sx6pm0-4mzqi0Cv6IpM0UivKN4t3BJKPm8kUqlVTM-9fB5FrQUVCw8VNZwRXznpwTTL_AieI22Rbms45sdPszeZ2M2ikDeHbrGadfU7MeG3XK-7Hk0QzQh42i_z_SeBGtcik_5O2"/>
+<div class="absolute bottom-12 right-0 bg-primary-container text-on-primary p-12 max-w-xs">
+<div class="font-headline text-5xl mb-2">15+</div>
+<div class="text-sm font-label uppercase tracking-widest opacity-80">Anni di Esperienza Chirurgica</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="bg-surface-container-low py-32 border-none">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-center">
+<div class="col-span-1">
+<h2 class="font-headline text-3xl tracking-tight leading-snug">Certificazioni e <br/><span class="text-primary italic">Affidabilità</span></h2>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="verified_user">verified_user</span>
+<div>
+<div class="font-bold text-lg">ISO 9001:2015</div>
+<p class="text-sm text-on-surface-variant">Qualità Certificata</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="medical_services">medical_services</span>
+<div>
+<div class="font-bold text-lg">AIOP Member</div>
+<p class="text-sm text-on-surface-variant">Accademia Protesica</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<div class="flex text-primary mb-1">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="font-bold">4.9/5 Google Reviews</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clinical Expertise Section -->
+<section class="bg-white py-40">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="text-center mb-24">
+<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Il Nostro Rigore</span>
+<h2 class="font-headline text-5xl tracking-tight">Specializzazioni Cliniche</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-surface-container-high border border-surface-container-high shadow-sm">
+<!-- Service 1 -->
+<div class="bg-white p-16 hover:bg-surface-container-low transition-colors duration-500 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform" data-icon="dentistry">dentistry</span>
+<h3 class="font-headline text-2xl mb-6">Implantologia Computer Assistita</h3>
+<p class="text-on-surface-variant leading-relaxed">Pianificazione 3D avanzata per il ripristino immediato del sorriso con carico immediato in 24 ore.</p>
+<div class="mt-10 h-1 w-12 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-16 hover:bg-surface-container-low transition-colors duration-500 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform" data-icon="vaping_rooms">vaping_rooms</span>
+<h3 class="font-headline text-2xl mb-6">Estetica Dentale &amp; Faccette</h3>
+<p class="text-on-surface-variant leading-relaxed">Digital Smile Design per simulare il risultato finale prima di iniziare il trattamento estetico.</p>
+<div class="mt-10 h-1 w-12 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-16 hover:bg-surface-container-low transition-colors duration-500 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform" data-icon="orthodontics">orthopedics</span>
+<h3 class="font-headline text-2xl mb-6">Ortodonzia Invisibile</h3>
+<p class="text-on-surface-variant leading-relaxed">Allineamento dentale trasparente per adulti e adolescenti senza l'uso di apparecchi metallici.</p>
+<div class="mt-10 h-1 w-12 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials: Voci di Rinascita -->
+<section class="bg-surface py-40 overflow-hidden">
+<div class="max-w-[1920px] mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-2xl">
+<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Testimonianze</span>
+<h2 class="font-headline text-6xl tracking-tighter italic">Voci di Rinascita</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-6 border border-outline-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="p-6 border border-outline-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-12 no-scrollbar overflow-x-auto pb-12">
+<!-- Testimonial 1 -->
+<div class="min-w-[450px] bg-white p-12 shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+<div class="flex gap-1 text-primary mb-8">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline text-2xl mb-12 italic leading-snug">"Oltre al risparmio, ho trovato una cura del dettaglio che in Italia non avevo mai visto. La clinica sembra un museo d'arte moderna."</p>
+<div class="flex items-center gap-4 border-t border-surface-container pt-8">
+<div class="w-12 h-12 bg-surface-container-high rounded-full overflow-hidden">
+<img alt="Patient Photo" class="w-full h-full object-cover" data-alt="Portrait of a smiling middle-aged man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbYz_s7iI-9t-sQpicu554k3z8196AoUHskG8BZeN_z5Yw-DeuTFXIZgTzm8NLxOfO9Utyt1S1sn-Yjr9HVCR7LhM0J-FMpQlzSHYkrpix-sHSEpXY1q5ZJXmXt7u4Zy951tubofY0VRRC8cxJtZN3ZUe7OrfEUJ7x3Xep96AdU-EHcPB_9rfDXlxaz7GgLDiqvqQg6XgTDFvxe61_rnM0r7KfJ7RsJt_G1HPluOQ0SL8qESsNn3ehkLszD7URdkXkt77oDEZy5mc5"/>
+</div>
+<div>
+<div class="font-bold">Marco Valente</div>
+<div class="text-xs font-label uppercase text-on-surface-variant tracking-widest">Implantologia Totale</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[450px] bg-white p-12 shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+<div class="flex gap-1 text-primary mb-8">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline text-2xl mb-12 italic leading-snug">"Tornare a sorridere dopo anni di imbarazzo. Il team mi ha seguita passo passo, organizzando anche il viaggio e il soggiorno."</p>
+<div class="flex items-center gap-4 border-t border-surface-container pt-8">
+<div class="w-12 h-12 bg-surface-container-high rounded-full overflow-hidden">
+<img alt="Patient Photo" class="w-full h-full object-cover" data-alt="Portrait of a smiling professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2dz4ou6TTegPR_yZD2GwlKTYIxYAcGpDYvnWOSdcZaRrEp6IcsmRqgtjgS2k1mfV5-pd1CLgdprRvp_B7cL7MiVV__p4xGGxUi-dnnAjt4iRzBAn5VArhw_6UI2se44qn6DHeB9yjNCqFuC_SGor3_teOnkZFe-u1XxjTyerJRO5QgWB2XCEZgS9nrKqTiL18enuEiU_dVfx-lDpLar07ZogWswg26sgp_INNStOfOtAztdsKXp4vweTs-OwXufLZVIEr9e66uoAG"/>
+</div>
+<div>
+<div class="font-bold">Elena Rossi</div>
+<div class="text-xs font-label uppercase text-on-surface-variant tracking-widest">Faccette in Ceramica</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="min-w-[450px] bg-white p-12 shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+<div class="flex gap-1 text-primary mb-8">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline text-2xl mb-12 italic leading-snug">"Precisione chirurgica incredibile. Non ho sentito dolore durante l'intervento e il recupero è stato velocissimo."</p>
+<div class="flex items-center gap-4 border-t border-surface-container pt-8">
+<div class="w-12 h-12 bg-surface-container-high rounded-full overflow-hidden">
+<img alt="Patient Photo" class="w-full h-full object-cover" data-alt="Portrait of an elderly happy gentleman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvyRWp7dD5Xv0XMOqN3K72p9oJ5qFfefNwBOpj0Iw1vkmHrXgj2xfqHRHOX6jaHo18ql7cl-UspHnv6EVEwPXSu2hyaKiTdRQH81w6QnC9-mGzfeQPG3yJXX9RJWSPXP0Qg1V4_iC4T4G6142ARS_jM9D0TK5spxl3XC5GzE_-Mc3ntheen_eNNPclzp1rtBWIuJk-Qf1TT7ln9JXbAaHSPG2kkUZfCJivazhstN6MXygiKGVPsEE18W2sKfvITH22JtYTnF2IIqv0"/>
+</div>
+<div>
+<div class="font-bold">Giuseppe Bianchi</div>
+<div class="text-xs font-label uppercase text-on-surface-variant tracking-widest">All-on-4 System</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Adriatic Clinics Listing Preview -->
+<section class="bg-white py-40">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid grid-cols-12 gap-24 items-center">
+<div class="col-span-12 lg:col-span-5">
+<h2 class="font-headline text-5xl mb-8 tracking-tight">Le Nostre Cliniche <br/>sull'Adriatico</h2>
+<p class="text-on-surface-variant text-lg mb-12 leading-relaxed">
+                            Strutture situate in posizioni privilegiate a Zagabria e sulla costa, facilmente raggiungibili dall'Italia. Ogni clinica è dotata di laboratori odontotecnici interni per una precisione millimetrica.
+                        </p>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<span class="font-bold block">Zagabria - Headquarter</span>
+<span class="text-sm text-on-surface-variant">Centro d'Eccellenza Chirurgica</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<span class="font-bold block">Fiume (Rijeka)</span>
+<span class="text-sm text-on-surface-variant">Hub Tecnologico Costiero</span>
+</div>
+</li>
+</ul>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                            VEDI MAPPA DELLE CLINICHE
+                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="east">east</span>
+</button>
+</div>
+<div class="col-span-12 lg:col-span-7">
+<div class="relative h-[600px] bg-surface-container border border-surface-container-high overflow-hidden">
+<img alt="Adriatic Coast Croatia" class="absolute inset-0 w-full h-full object-cover" data-alt="Stunning blue adriatic coast with mediterranean architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvtL5rXp484fpv0cvhFaYIvNcGsZrCLPhH9uK7Nk7P9yu25gZ7EUuvTP8jEYR0oRjDyaI1GLB00NYKlvtfon87KoPgJj6PUFTefG1pQhf6YCWlMUt1qG7FTIIAbnVcGiMcYYOi3xNDsKFDaX4knJSBQUFy1HRzjAqegKsM5OEZHjx_jHp_ry1T4CMG58omQTknjzWURRvtBW3kUmRelDTurK-gm0ll2Wb_ZiVGFA0BkwvK1FntFR0IDUnxx36m1OkqCpoBGF8W7FXD"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
+<span class="material-symbols-outlined text-8xl opacity-80" data-icon="apartment">apartment</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<main id="page-clinica" style="display: none;">
+
+<!-- Hero Section / Title -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 mb-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-outline-variant/20 pb-12">
+<div class="max-w-2xl">
+<span class="label-sm font-bold text-primary tracking-[0.2em] uppercase text-[10px] mb-4 block">Eccellenza Clinica</span>
+<h1 class="text-5xl md:text-7xl font-serif tracking-tight text-on-surface leading-[1.1]">
+                        Le Nostre <br/><span class="italic text-primary">Strutture</span>
+</h1>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-2 border-b-2 border-primary text-primary font-bold text-sm tracking-wide transition-colors">Tutte le sedi</button>
+<button class="px-6 py-2 border-b-2 border-transparent text-neutral-500 hover:text-primary font-medium text-sm tracking-wide transition-colors">Zagabria</button>
+<button class="px-6 py-2 border-b-2 border-transparent text-neutral-500 hover:text-primary font-medium text-sm tracking-wide transition-colors">Pola</button>
+<button class="px-6 py-2 border-b-2 border-transparent text-neutral-500 hover:text-primary font-medium text-sm tracking-wide transition-colors">Fiume</button>
+</div>
+</div>
+</section>
+<!-- Clinic Grid -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+<!-- Card 1 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant/10 hover:z-10 transition-all duration-500 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Clinica Zagabria Premium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern high-end dental surgery room with white equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxqwYlJ8CdPjslWRAUV4D5UIE1AlfOKHdGuxVBWf2jmTWRLjwUjh-UfK0CgavodXEQMrnx1ot9ItRsU-Lkf9SkkUpGZPPd9QYGChBvAKFheYnRLS-pQ_kMlEOAwQUPPxFrugjtaASsExmcazH5HNj0EhNJS5otn5babBqrBvZ6thmzOJN5fbSa66RLTA1SNSkVxNZ_q6J_Lo6Su4VQWn6Y_6v4OWj4tY6rWPrBlFTztI4F75M93WSf5j0GqVENxk3lyk3YniKH0sox"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Zagabria, Croazia</p>
+<h3 class="text-2xl font-serif text-on-surface">Clinica Zagabria Premium</h3>
+</div>
+</div>
+<div class="space-y-3 mb-10">
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Implantologia Avanzata</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Scanner Intraorale 3D</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Sedazione Cosciente</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 group-hover:gap-4 transition-all" href="#">
+                            Visualizza Dettagli
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group relative bg-surface-container-low border border-outline-variant/10 hover:z-10 transition-all duration-500 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Pola Dental Hub" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern architectural dental clinic exterior with glass walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2_nr3rNwHFVoIzdgOjjGFwyVGX3JdVH0NGPA4NGu252nPnVWa38DFkfWPaWF0bJ8geNvcClsrr6tg36ceKKBhH5qthPYUPI7eQEo2iKzYpwq6Gj5NeP64_HQXiageJw-R-wiXKW2s-xcI79Ujy9yjT7lOjoGpXSGGULN9zTzNKcMKSqsxS-b6PvVNvXd0NriqRAFK35-sEEN5i681uohY0JrLcimCASsYQtM3uf8G6cyf8YH_mEuiDZK-xKucDzUbikwcjC5emjht"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Pola, Istria</p>
+<h3 class="text-2xl font-serif text-on-surface">Pola Dental Hub</h3>
+</div>
+</div>
+<div class="space-y-3 mb-10">
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Chirurgia Maxillo-Facciale</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Estetica Dentale</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Laboratorio Odontotecnico</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 group-hover:gap-4 transition-all" href="#">
+                            Visualizza Dettagli
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant/10 hover:z-10 transition-all duration-500 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Riviera Clinic Fiume" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Bright minimalist dental clinic lobby with white furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhfqfq0jzqkQ9cYGiDuGf4frHmG4ifob7v0xHvVxTA3J1nvjwa0GQjGSOCpK7XP8STnwmnYOuS_blX5qMvGaiO1Qkhc25KJV2vv4WJyq85TQ_ASW5nO8_uw9X2gIez7Y9DxhvRWVxlWqpz5XT3O6sHjEwtYwLsp55zcUReeLmnX8eR-pdbqLP2t_4LtYMeifHKI9kzmYecz0hGTlORHNRzC6QIhMjglwbZmjDo3NNo6Qfo1hxOi8rIbShYF-8KhxDpnPhqblfuZqI7"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Fiume, Quarnaro</p>
+<h3 class="text-2xl font-serif text-on-surface">Riviera Clinic Fiume</h3>
+</div>
+</div>
+<div class="space-y-3 mb-10">
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Parodontologia</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Ortodonzia Invisibile</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Protesi All-on-4</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 group-hover:gap-4 transition-all" href="#">
+                            Visualizza Dettagli
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 (Asymmetric Layout Example) -->
+<article class="group relative bg-surface-container-low border border-outline-variant/10 hover:z-10 transition-all duration-500 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Clinica Istria Nord" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional dental laboratory with high tech tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3nB2UngbgKc5IBaxpyun-XZS1VJIf-QGx6G8tirWmYcBD8u_CTR5l8PlRvBqmMbV8q2foTcyrdXX0ihiK2BgTkRiyaVLr0xpOQs4T3H3zkJgAdOR5pSwBTx51iwgiIz7VHbgxkR8EoJM7XJfxsmFfoKK-Fn_9awb_9S4jzvsn2Qodn1PtWMNZBbRjFIu2iYRuOF9HK8km1dEiHhdXcVLGIzhFIRR1WJCeXD25Pog0zNIuIa_u92_4Vak8nB_IPOAWunzuuPpvhWHY"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Parenzo, Istria</p>
+<h3 class="text-2xl font-serif text-on-surface">Clinica Istria Nord</h3>
+</div>
+</div>
+<div class="space-y-3 mb-10">
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Endodonzia Microscopica</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Gnatologia Clinica</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Radiologia Digitale</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 group-hover:gap-4 transition-all" href="#">
+                            Visualizza Dettagli
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="group relative bg-surface-container-lowest border border-outline-variant/10 hover:z-10 transition-all duration-500 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Zagabria East Medical" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sterile dental environment with blue lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN8ZGeatIgW52E8hK_NkHVBsU66ZIQZVFVgJ6zjO7wGNnMas_JCa1gB32_J4tM4Hz_qu7uCs5acW1gK3_sDpxQQ3jy583hgP4Y3xdFG7sGVBp_7r2rbVpt5_5CA-Wwyj6qUfuxBkf0dKjS3Tdhj9bQRhmolElaFfSZy_-H-MG5dUXO1wkRJxqvqj2jk6GtWBf4I25TPXAr4qVoszBS2DlEyXm4lOTFHw7AGLk0zfBukAf6PFORSNwCQ-r6WvrgZYaSeRFIZ3yG73sC"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Zagabria, Periferia</p>
+<h3 class="text-2xl font-serif text-on-surface">Zagabria East Medical</h3>
+</div>
+</div>
+<div class="space-y-3 mb-10">
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Igiene Professionale</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Otturazioni Estetiche</span>
+</div>
+<div class="flex items-center gap-3 text-neutral-600">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium tracking-tight">Pronto Soccorso 24h</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 group-hover:gap-4 transition-all" href="#">
+                            Visualizza Dettagli
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- CTA Card -->
+<article class="relative flex flex-col justify-center bg-primary border border-primary p-12 overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container opacity-20 -mr-20 -mt-20 blur-3xl"></div>
+<div class="relative z-10">
+<h3 class="text-3xl font-serif text-white mb-6 leading-tight">Non trovi la sede più vicina?</h3>
+<p class="text-white/80 mb-10 text-sm leading-relaxed max-w-xs">Offriamo servizi di trasporto gratuito da Trieste per tutte le nostre cliniche principali in Croazia.</p>
+<button class="w-full bg-white text-primary px-8 py-5 text-[11px] font-bold uppercase tracking-[0.2em] no-radius transition-all hover:bg-surface-container-low">
+                            Contattaci Ora
+                        </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter / Minimal Section -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 mt-32">
+<div class="bg-surface-container-low p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-md">
+<h2 class="text-3xl font-serif text-on-surface mb-4 italic">Standard di eccellenza.</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">Iscriviti per ricevere aggiornamenti sulle nuove tecnologie dentali e casi studio clinici dai nostri specialisti.</p>
+</div>
+<div class="w-full max-w-md flex gap-0">
+<input class="flex-1 bg-white border-none focus:ring-1 focus:ring-primary px-6 py-4 text-sm no-radius" placeholder="Email aziendale" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] no-radius hover:bg-primary-container transition-colors">
+                        Invia
+                    </button>
+</div>
+</div>
+</section>
+
+</main>
+
+<main id="page-prezzi" style="display: none;">
+
+<!-- Hero Section -->
+<section class="px-12 py-24 bg-white">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<span class="text-primary font-label text-xs uppercase tracking-[0.2em] font-bold">Listino Prezzi 2024</span>
+<h1 class="text-6xl md:text-7xl font-headline font-bold text-on-surface leading-[1.1] tracking-tight">
+                        Eccellenza Clinica,<br/>Trasparenza Etica.
+                    </h1>
+<p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-xl">
+                        Offriamo cure odontoiatriche di alto livello con un risparmio fino al 60% rispetto alle tariffe medie italiane, mantenendo standard qualitativi certificati a livello internazionale.
+                    </p>
+</div>
+<div class="relative h-[500px] bg-surface-container overflow-hidden">
+<img alt="Modern Dental Clinic" class="w-full h-full object-cover" data-alt="Interior of a modern high-end dental clinic room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLHvXoRY1AotD6WITPqMpC25YWLzc_lIP63D0TLS_7il9bd5l13a2BdEjbDEBn5ZRDO3MFxaX4uy8hSFPR3aUCi3-H0l7L5By-sYrjNsHPd7sACmuZdZu0LtWW3nlZzN5h3GW9AeRDS8c4VfJ1gYH6gsbUoAT4LcQVfzmX8PMUEOctsd5EQoQ3maoOMBPdx_Xj2gfm3FMMrJr-7s0pjWqnPkXyEJwSxUvY0uM_e3bZlO4cVEXr1baIxsgeM0kjMQt6b45Ekm47r39y"/>
+</div>
+</div>
+</section>
+<!-- Pricing Table Section -->
+<section class="px-12 py-32 bg-surface">
+<div class="max-w-[1400px] mx-auto">
+<div class="mb-20 space-y-4">
+<h2 class="text-4xl font-headline font-bold text-on-surface">Confronto Tariffe</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Trattamento</th>
+<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Prezzo Italia (Media)</th>
+<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-primary">Prezzo Croazia</th>
+<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Risparmio</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
+<td class="p-8 font-medium text-lg">Impianto Dentale (Titanio)</td>
+<td class="p-8 text-on-surface-variant line-through opacity-50">€ 1.200</td>
+<td class="p-8 text-primary font-bold text-xl">€ 550</td>
+<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-54%</span></td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
+<td class="p-8 font-medium text-lg">Corona in Zirconio Ceramica</td>
+<td class="p-8 text-on-surface-variant line-through opacity-50">€ 850</td>
+<td class="p-8 text-primary font-bold text-xl">€ 280</td>
+<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-67%</span></td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
+<td class="p-8 font-medium text-lg">Protesi All-on-4 (Arcata Completa)</td>
+<td class="p-8 text-on-surface-variant line-through opacity-50">€ 9.500</td>
+<td class="p-8 text-primary font-bold text-xl">€ 4.200</td>
+<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-56%</span></td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
+<td class="p-8 font-medium text-lg">Faccetta Estetica E-Max</td>
+<td class="p-8 text-on-surface-variant line-through opacity-50">€ 900</td>
+<td class="p-8 text-primary font-bold text-xl">€ 350</td>
+<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-61%</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-12 text-sm text-on-surface-variant italic font-body">
+                    *I prezzi indicati sono stime basate su listini medi. Per un preventivo preciso è necessaria una panoramica dentale (ortopantomografia).
+                </p>
+</div>
+</section>
+<!-- Treatments Detailed Sections (Bento-style layout) -->
+<section class="px-12 py-32 bg-white">
+<div class="max-w-[1920px] mx-auto">
+<div class="mb-24 text-center max-w-3xl mx-auto space-y-6">
+<h2 class="text-5xl font-headline font-bold">Specializzazioni Chirurgiche</h2>
+<p class="text-on-surface-variant text-lg">Utilizziamo solo protocolli internazionali e materiali certificati CE, garantendo il successo clinico a lungo termine.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Implantologia -->
+<div class="md:col-span-7 bg-surface-container-low p-16 flex flex-col justify-between min-h-[600px] relative overflow-hidden group">
+<div class="z-10 max-w-lg space-y-8">
+<span class="text-primary font-label text-xs tracking-widest font-bold uppercase">01. Chirurgia Avanzata</span>
+<h3 class="text-4xl font-headline font-bold">Implantologia</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Sostituzione di denti mancanti mediante radici artificiali in titanio biocompatibile. Specializzati in impianti a carico immediato e rigenerazione ossea per casi complessi.
+                            </p>
+<ul class="space-y-4 font-body text-sm font-medium">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" style="font-size: 18px;">check_circle</span> Impianti Premium Straumann / Nobel Biocare</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" style="font-size: 18px;">check_circle</span> Chirurgia guidata computerizzata</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" style="font-size: 18px;">check_circle</span> Garanzia a vita sul materiale implantare</li>
+</ul>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity">
+<img alt="Dental Implant" class="w-full h-full object-contain" data-alt="Technical illustration or model of a dental implant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAZKTUgJ3tJWusyKxos3tNVupXkOuXoIn1r0I_CCHVUO31LaekJNkWUvLu6Vr4P7M4RAtSrni-uWmppaAgkPxqyD1WnhTEd9yhpSLJUT5nDXgg1heXTlRmPLyxIZTdp8QPej8qKlriNsyiF0WhCMcVrclRJYN8ghL5gj8nKPaZ5EM4RAP1pIMaaWBwn14qVUmP__UVaICDJ2BYaTg0SrBBkevvoiqjwl7MS0mEpem-t4t5WPY-wsQzpvb2I4gkdgnuXaZp4JaveVjA"/>
+</div>
+</div>
+<!-- Protesi -->
+<div class="md:col-span-5 bg-primary-container text-on-primary p-16 flex flex-col justify-between min-h-[600px]">
+<div class="space-y-8">
+<span class="text-white/60 font-label text-xs tracking-widest font-bold uppercase">02. Riabilitazione</span>
+<h3 class="text-4xl font-headline font-bold text-white">Protesi Dentale</h3>
+<p class="text-white/80 leading-relaxed">
+                                Restauro della funzione masticatoria con soluzioni fisse o mobili ad alta precisione, realizzate nel nostro laboratorio odontotecnico digitale interno.
+                            </p>
+<div class="pt-8 border-t border-white/20">
+<p class="text-sm font-label uppercase tracking-widest font-bold text-white/60 mb-4">Materiali Disponibili</p>
+<div class="flex flex-wrap gap-4">
+<span class="bg-white/10 px-4 py-2 text-xs">ZIRCONIO</span>
+<span class="bg-white/10 px-4 py-2 text-xs">CERAMICA E-MAX</span>
+<span class="bg-white/10 px-4 py-2 text-xs">PEEK</span>
+</div>
+</div>
+</div>
+<img alt="Dental Prosthetics" class="w-full h-48 object-cover mt-12 grayscale brightness-110" data-alt="Professional close-up of high quality dental crowns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD47ZYe3Oc6qxXu85rSFfzzw5T_tDM3_bLNFGXW6AxNuq7HdQsAUrNLhu1r2Drw9zadXkiT6k9onFRRkPKpsCTG7_QNUk7z9-YNRVPghDCtnpbRmFQ75YqjrO3Qp0G7J5LpUjF0AImOyNKH-ktazTb5BLs_tNhkjHfGng3oZ88aYcp00CYeoCvYZ8Gu5z-gK-Aj3JbFspsYxohwL98j2cElVzkvQ18f5lc76oCXxtfMWCmNqjeip0DzhtWrbLGYMGQDOoTftnYdkkI4"/>
+</div>
+<!-- Estetica -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 bg-surface-container-high">
+<div class="p-16 space-y-8 flex flex-col justify-center">
+<span class="text-primary font-label text-xs tracking-widest font-bold uppercase">03. Sorriso Perfetto</span>
+<h3 class="text-4xl font-headline font-bold">Estetica Dentale</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Trasformiamo il tuo sorriso con trattamenti mini-invasivi. Dalle faccette dentali ultra-sottili allo sbiancamento professionale a luce LED fredda.
+                            </p>
+<button class="w-fit border border-primary/20 text-primary px-8 py-4 font-bold tracking-widest uppercase text-xs hover:bg-primary hover:text-white transition-all duration-300">
+                                Scopri Digital Smile Design
+                            </button>
+</div>
+<div class="h-full min-h-[400px]">
+<img alt="Perfect Smile" class="w-full h-full object-cover" data-alt="Beautiful healthy smile of a patient after dental treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzlClg1lL3KDQ5FVI-CfJpXq130qTgi8eqKfzxggUewtl9kOnO1Ex2igCZT85WNkE7Y-YvXDJaRcJPiWLZNWNdHS-LX3A56GC5CSH2EGaSVw7m9IQc-Cav4Ujq0zjCoyb-MPunmMzz7DjBtnJNdH756HIIvflHnG7_aB7oLYTDRSA0YU6uh0PVZ4xkC-_IJ3a-lHLzn2cRoPw5cgAfTKa-4xEbyIm1wnJ1LbfOaaxfkVFyNozlNG7CkVJIMI2zWpKQn5qdsTrPhgUe"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-12 py-32 bg-primary">
+<div class="max-w-4xl mx-auto text-center space-y-12">
+<h2 class="text-5xl md:text-6xl font-headline font-bold text-white leading-tight">Il tuo nuovo sorriso inizia oggi.</h2>
+<p class="text-xl text-white/70 max-w-2xl mx-auto font-body">Inviaci la tua panoramica per una consulenza gratuita e un preventivo dettagliato senza impegno.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-white text-primary px-12 py-5 font-bold uppercase tracking-widest text-sm hover:translate-y-[-2px] transition-transform">Invia Panoramica</button>
+<button class="border border-white/30 text-white px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-colors">Contatta Clinica</button>
+</div>
+</div>
+</section>
+
+</main>
+
+<main id="page-prenota" style="display: none;">
+
+<!-- Hero Section: Clinical Excellence -->
+<section class="relative h-[614px] min-h-[500px] overflow-hidden bg-surface-container">
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-container opacity-10 z-10"></div>
+<img alt="Clinical Dental Environment" class="absolute inset-0 w-full h-full object-cover" data-alt="Modern high-end clinical dental surgery room with equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKWzWoc6_Pk2_0QZAM0zdpA0x2-Dgy7yyvrf-Rjbwd6Ztgu4XewCFPuA8TV9xpZ6DyK2e6cqZfQT5o-NYOPcCjJ__7F2KQhj4qRtsPoKquVKpKEsvXcsCWH3y86KXRw29arzN6EUacq2mBxMCqdR8NpI7Hjab6Sqf8JQn2HE45iJzHAcpQrYc939-VGqE93ft8ZJGvqfZ_NjtM21lJBaO8ydNeZI1NJilZtJIC8KDw7L80_cIMSgqBj7h9c5T6lr4Wp5nrC1gAGwAd"/>
+<div class="relative z-20 h-full flex items-center px-12 max-w-[1920px] mx-auto">
+<div class="max-w-2xl bg-white/90 backdrop-blur-md p-16 shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+<h1 class="text-5xl md:text-7xl font-bold font-serif tracking-tight text-on-surface mb-6 leading-tight">
+                        Precisione <br/><span class="text-primary italic">Senza Confini.</span>
+</h1>
+<p class="text-on-surface-variant font-body text-lg max-w-lg mb-8 leading-relaxed">
+                        L'eccellenza odontoiatrica croata incontra il rigore clinico internazionale. Prenota il tuo consulto specialistico oggi.
+                    </p>
+<div class="flex gap-8">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-outline mb-1">REPARTO</span>
+<span class="font-bold text-on-surface">CHIRURGIA ESTETICA</span>
+</div>
+<div class="w-[1px] bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-outline mb-1">LOCALITÀ</span>
+<span class="font-bold text-on-surface">ZAGABRIA / RIJEKA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking & Contact Section -->
+<section class="bg-white py-32 px-12">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24">
+<!-- Contact Form Column -->
+<div class="lg:col-span-7">
+<div class="mb-16">
+<h2 class="text-4xl font-serif text-on-surface mb-4">Richiesta di Prenotazione</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<form action="#" class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-outline mb-3">Nome e Cognome</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 px-6 py-5 transition-all text-on-surface" placeholder="Mario Rossi" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-outline mb-3">Email Clinica</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 px-6 py-5 transition-all text-on-surface" placeholder="m.rossi@esempio.it" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-outline mb-3">Telefono</label>
+<input class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 px-6 py-5 transition-all text-on-surface" placeholder="+39 012 345 6789" type="tel"/>
+</div>
+<div class="relative group">
+<label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-outline mb-3">Interesse Primario</label>
+<select class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 px-6 py-5 transition-all text-on-surface appearance-none">
+<option>Implantologia Dentale</option>
+<option>Protesi Fissa</option>
+<option>Estetica Dentale</option>
+<option>Ortodonzia Invisibile</option>
+</select>
+</div>
+</div>
+<div class="relative group">
+<label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-outline mb-3">Messaggio / Note Cliniche</label>
+<textarea class="w-full bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary focus:ring-0 px-6 py-5 transition-all text-on-surface" placeholder="Descrivi brevemente la tua necessità..." rows="4"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-6">
+<p class="text-xs text-outline max-w-md leading-relaxed">
+                                Cliccando su "Invia Prenotacija" accetti i nostri Termini di Servizio e la Privacy Policy relativa al trattamento dei dati sanitari.
+                            </p>
+<button class="bg-primary-container text-on-primary px-16 py-6 font-bold text-lg hover:bg-primary transition-all duration-300 shadow-xl w-full md:w-auto" type="submit">
+                                Invia Prenotacija
+                            </button>
+</div>
+</form>
+</div>
+<!-- Channels & Support Column -->
+<div class="lg:col-span-5 space-y-16">
+<!-- Support Channels Bento Box -->
+<div class="bg-surface-container p-16 space-y-12">
+<h3 class="text-2xl font-serif text-on-surface">Canali di Supporto</h3>
+<div class="space-y-8">
+<a class="flex items-center gap-6 group bg-surface-container-lowest p-6 transition-all hover:translate-x-2" href="tel:+3900000000">
+<div class="w-16 h-16 bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">phone</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline font-bold">TELEFONO DIRETTO</span>
+<span class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">+39 800 123 456</span>
+</div>
+</a>
+<a class="flex items-center gap-6 group bg-surface-container-lowest p-6 transition-all hover:translate-x-2" href="#">
+<div class="w-16 h-16 bg-[#25D366] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-outline font-bold">WHATSAPP CLINICO</span>
+<span class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Chat Live con Medico</span>
+</div>
+</a>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<span class="block font-bold text-on-surface">Orari di Apertura</span>
+<p class="text-sm text-on-surface-variant">Lun - Ven: 08:00 - 20:00<br/>Sabato: 09:00 - 15:00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Location Map (Abstract/Representation) -->
+<div class="relative aspect-video bg-surface-container-high group overflow-hidden">
+<img alt="Map Representation" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 transition-all duration-700" data-location="Croatia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkX8xmthDFMqnCkwiBMeh3FzX2VZhk6fV2_o3pRD95kPLWKtwNAvJxiFcBhe-FSkMNPxvTmaik0-hAKQDw2iZmRW4vi-5OrL9ae9kXIKlAYyBMfLFPbuBSG6r52tCAumKx9Qf3jsY_hCtRvefDmJBAnm9bvsVtAnvBdeuqA0ZDl3pQCf0CM0h4cuGzljT_y2JowwhmaakbBT754Xd1RCa45ZPkQhomRqxVaT5MAlwyqIP5wEqmjkZQDOUjjZtyKfPdL_7rVaAWJqXF"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-white/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-5xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h4 class="text-2xl font-serif text-blue-950 mb-2">Sedi in Croazia</h4>
+<p class="text-on-surface font-medium mb-6">Zagreb • Rijeka • Pula</p>
+<button class="bg-white text-primary px-8 py-3 font-bold border-2 border-primary hover:bg-primary hover:text-white transition-all">
+                                Visualizza su Mappa
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clinic Environment Section (Tonal Shift) -->
+<section class="bg-surface-container-low py-32 px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="bg-surface-container-lowest p-12">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">medical_services</span>
+<h4 class="text-xl font-serif text-on-surface mb-4">Standard ISO 9001</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Tutte le nostre procedure chirurgiche seguono i più rigidi protocolli di sterilizzazione e sicurezza europei.</p>
+</div>
+<div class="bg-surface-container-lowest p-12">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">biotech</span>
+<h4 class="text-xl font-serif text-on-surface mb-4">Tecnologia 3D</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Utilizziamo sistemi di scansione intraorale e diagnostica CBCT di ultima generazione per risultati millimetrici.</p>
+</div>
+<div class="bg-surface-container-lowest p-12">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">airport_shuttle</span>
+<h4 class="text-xl font-serif text-on-surface mb-4">Trasporto Gratuito</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Servizio navetta dedicato dai principali aeroporti e stazioni del Nord Italia direttamente alla clinica.</p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer: Large Blue Sapphire -->
+<footer class="bg-primary bg-gradient-to-br from-primary to-primary-container text-white py-32 border-none">
+<div class="max-w-[1920px] mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-20 mb-32">
+<div class="md:col-span-5">
+<div class="font-serif italic text-3xl mb-12 text-white">DENTISTA CROAZIA</div>
+<h3 class="font-headline text-5xl mb-12 leading-tight tracking-tighter">
+                        La vostra salute dentale, <br/>il nostro impegno architettonico.
+                    </h3>
+<div class="flex gap-4">
+<a class="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-2 md:col-start-8">
+<h4 class="font-label text-xs font-bold uppercase tracking-[0.2em] opacity-60 mb-8">Percorsi</h4>
+<ul class="space-y-4">
+<li><a class="hover:underline underline-offset-8" href="#">Impianti</a></li>
+<li><a class="hover:underline underline-offset-8" href="#">All-on-4</a></li>
+<li><a class="hover:underline underline-offset-8" href="#">Estetica</a></li>
+<li><a class="hover:underline underline-offset-8" href="#">Logistica Viaggio</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label text-xs font-bold uppercase tracking-[0.2em] opacity-60 mb-8">Informazioni</h4>
+<ul class="space-y-4">
+<li><a class="hover:underline underline-offset-8" href="#">Chi Siamo</a></li>
+<li><a class="hover:underline underline-offset-8" href="#">Dottori</a></li>
+<li><a class="hover:underline underline-offset-8" href="#">Garanzie</a></li>
+<li><a class="hover:underline underline-offset-8" href="#">Costi</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-20 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="font-sans text-[11px] uppercase tracking-[0.15em] font-semibold text-white/50">
+                    © 2024 DENTISTA CROAZIA. ECCELLENZA CLINICA E RIGORE ARCHITETTONICO.
+                </div>
+<div class="flex gap-8 font-sans text-[11px] uppercase tracking-[0.15em] font-semibold text-white/50">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Cookies</a>
+<a class="hover:text-white transition-colors" href="#">Termini Legali</a>
+<a class="hover:text-white transition-colors" href="#">Supporto Pazienti</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+function showPage(pageId) {
+    var pages = ['home', 'clinica', 'prezzi', 'prenota'];
+    for (var i = 0; i < pages.length; i++) {
+        var el = document.getElementById('page-' + pages[i]);
+        if(el) el.style.display = 'none';
+    }
+    var target = document.getElementById('page-' + pageId);
+    if(target) target.style.display = 'block';
+    
+    // Hide mobile menu when a link is clicked
+    var menu = document.getElementById('nav-links');
+    if (menu && menu.classList.contains('flex')) {
+        menu.classList.remove('flex');
+        menu.classList.add('hidden');
+    }
+    window.scrollTo(0, 0);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('nav-links');
+    if(btn && menu) {
+        btn.addEventListener('click', function() {
+            if(menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.remove('flex');
+                menu.classList.add('hidden');
+            }
+        });
+    }
+});
+</script>
+</body></html>
