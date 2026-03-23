@@ -88,6 +88,9 @@
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        html, body { width: 100%; overflow-x: hidden; }
+        .no-radius { border-radius: 0 !important; }
+        img { max-width: 100%; height: auto; }
     </style>
 </head>
 <body class="bg-background font-body text-on-surface antialiased">
@@ -104,7 +107,7 @@
     </button>
     
     <!-- Linkovi i Gumb (Zapakirani za Dropdown na mobitelu i Vodoravni niz na desktopu) -->
-    <div id="nav-links" class="hidden w-full md:w-auto md:flex flex-col md:flex-row items-center gap-6 lg:gap-12 mt-4 md:mt-0 pt-6 md:pt-0 border-t md:border-none border-outline-variant/20 pb-6 md:pb-0 h-screen md:h-auto overflow-y-auto md:overflow-visible bg-white/95 md:bg-transparent absolute md:relative top-full left-0 px-6 md:px-0 shadow-lg md:shadow-none">
+    <div id="nav-links" class="hidden w-full md:w-auto md:flex flex-col md:flex-row items-center gap-6 lg:gap-12 mt-4 md:mt-0 pt-6 md:pt-0 border-t md:border-none border-outline-variant/20 pb-6 md:pb-0 max-h-[calc(100vh-96px)] md:max-h-none overflow-y-auto md:overflow-visible bg-white/95 md:bg-transparent absolute md:relative top-full left-0 px-6 md:px-0 shadow-lg md:shadow-none">
         
         <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center py-2 md:py-0" href="#trattamenti" onclick="showPage('home')">Trattamenti</a>
         <a class="text-neutral-600 dark:text-neutral-400 font-medium font-serif tracking-tight hover:text-blue-800 transition-colors duration-300 w-full md:w-auto text-center py-2 md:py-0" href="#clinica" onclick="showPage('clinica')">Clinica</a>
@@ -143,7 +146,7 @@
                         </button>
 </div>
 </div>
-<div class="col-span-12 lg:col-span-6 relative h-[600px] lg:h-screen w-full">
+<div class="col-span-12 lg:col-span-6 relative h-[420px] sm:h-[520px] md:h-[600px] lg:h-screen w-full">
 <img alt="Modern Dental Clinic Interior" class="absolute inset-0 w-full h-full object-cover grayscale-[30%] brightness-95" data-alt="Minimalist modern white dental office with high-tech equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy5AIlMFC6jPnOJz4-IhF-qi2oRP1HjW4PXddeaAm20SQipJvB37Nv5T5CifGV1r1kmw0YijDS2WACENvuxENleH09l-qox_vwOT04yJVPZ9tv1YWU9cmCtpHAgDUwZh7puee2Sx6pm0-4mzqi0Cv6IpM0UivKN4t3BJKPm8kUqlVTM-9fB5FrQUVCw8VNZwRXznpwTTL_AieI22Rbms45sdPszeZ2M2ikDeHbrGadfU7MeG3XK-7Hk0QzQh42i_z_SeBGtcik_5O2"/>
 <div class="absolute bottom-12 right-0 bg-primary-container text-on-primary p-12 max-w-xs">
 <div class="font-headline text-2xl md:text-4xl lg:text-5xl mb-2">15+</div>
@@ -346,7 +349,7 @@
 
 </main>
 
-<main id="page-clinica" style="display: none;">
+<main id="page-clinica" style="display: none;" class="pt-24">
 
 <!-- Hero Section / Title -->
 <section class="max-w-[1440px] mx-auto px-6 md:px-6 lg:px-12 mb-20">
@@ -589,40 +592,40 @@
 <table class="w-full text-left border-collapse">
 <thead>
 <tr class="bg-surface-container-high">
-<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Trattamento</th>
-<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Prezzo Italia (Media)</th>
-<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-primary">Prezzo Croazia</th>
-<th class="p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Risparmio</th>
+<th class="p-4 sm:p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Trattamento</th>
+<th class="p-4 sm:p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Prezzo Italia (Media)</th>
+<th class="p-4 sm:p-8 text-xs font-bold font-label uppercase tracking-widest text-primary">Prezzo Croazia</th>
+<th class="p-4 sm:p-8 text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Risparmio</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-outline-variant/10">
 <!-- Row 1 -->
 <tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
-<td class="p-8 font-medium text-lg">Impianto Dentale (Titanio)</td>
-<td class="p-8 text-on-surface-variant line-through opacity-50">€ 1.200</td>
-<td class="p-8 text-primary font-bold text-xl">€ 550</td>
-<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-54%</span></td>
+<td class="p-4 sm:p-8 font-medium text-lg">Impianto Dentale (Titanio)</td>
+<td class="p-4 sm:p-8 text-on-surface-variant line-through opacity-50">€ 1.200</td>
+<td class="p-4 sm:p-8 text-primary font-bold text-xl">€ 550</td>
+<td class="p-4 sm:p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-54%</span></td>
 </tr>
 <!-- Row 2 -->
 <tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
-<td class="p-8 font-medium text-lg">Corona in Zirconio Ceramica</td>
-<td class="p-8 text-on-surface-variant line-through opacity-50">€ 850</td>
-<td class="p-8 text-primary font-bold text-xl">€ 280</td>
-<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-67%</span></td>
+<td class="p-4 sm:p-8 font-medium text-lg">Corona in Zirconio Ceramica</td>
+<td class="p-4 sm:p-8 text-on-surface-variant line-through opacity-50">€ 850</td>
+<td class="p-4 sm:p-8 text-primary font-bold text-xl">€ 280</td>
+<td class="p-4 sm:p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-67%</span></td>
 </tr>
 <!-- Row 3 -->
 <tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
-<td class="p-8 font-medium text-lg">Protesi All-on-4 (Arcata Completa)</td>
-<td class="p-8 text-on-surface-variant line-through opacity-50">€ 9.500</td>
-<td class="p-8 text-primary font-bold text-xl">€ 4.200</td>
-<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-56%</span></td>
+<td class="p-4 sm:p-8 font-medium text-lg">Protesi All-on-4 (Arcata Completa)</td>
+<td class="p-4 sm:p-8 text-on-surface-variant line-through opacity-50">€ 9.500</td>
+<td class="p-4 sm:p-8 text-primary font-bold text-xl">€ 4.200</td>
+<td class="p-4 sm:p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-56%</span></td>
 </tr>
 <!-- Row 4 -->
 <tr class="bg-white hover:bg-surface-container-low transition-colors duration-200">
-<td class="p-8 font-medium text-lg">Faccetta Estetica E-Max</td>
-<td class="p-8 text-on-surface-variant line-through opacity-50">€ 900</td>
-<td class="p-8 text-primary font-bold text-xl">€ 350</td>
-<td class="p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-61%</span></td>
+<td class="p-4 sm:p-8 font-medium text-lg">Faccetta Estetica E-Max</td>
+<td class="p-4 sm:p-8 text-on-surface-variant line-through opacity-50">€ 900</td>
+<td class="p-4 sm:p-8 text-primary font-bold text-xl">€ 350</td>
+<td class="p-4 sm:p-8"><span class="bg-primary-container/10 text-primary px-4 py-2 font-bold text-sm">-61%</span></td>
 </tr>
 </tbody>
 </table>
@@ -710,7 +713,7 @@
 
 </main>
 
-<main id="page-prenota" style="display: none;">
+<main id="page-prenota" style="display: none;" class="pt-24">
 
 <!-- Hero Section: Clinical Excellence -->
 <section class="relative h-[614px] min-h-[500px] overflow-hidden bg-surface-container">
@@ -865,7 +868,7 @@
 
 <!-- Footer: Large Blue Sapphire -->
 <footer class="bg-primary bg-gradient-to-br from-primary to-primary-container text-white py-32 border-none">
-<div class="max-w-[1920px] mx-auto px-12">
+<div class="max-w-[1920px] mx-auto px-6 md:px-12">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-20 mb-32">
 <div class="md:col-span-5">
 <div class="font-serif italic text-3xl mb-12 text-white">DENTISTA CROAZIA</div>
